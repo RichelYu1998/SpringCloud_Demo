@@ -5,10 +5,11 @@
       <list>
         <option value="$PROJECT_DIR$/sp01-commons/pom.xml" />
         <option value="$PROJECT_DIR$/../SpringCloud/sp02-itemservice/pom.xml" />
+        <option value="$PROJECT_DIR$/sp02-itemservice/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
