@@ -6,15 +6,15 @@ import cn.tedu.pojo.Order;
 import cn.tedu.pojo.User;
 import cn.tedu.web.util.JsonResult;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
 public class RibbonController {
-    @Autowired
+    @Resource
     private RestTemplate rt;
 
     @GetMapping("/item-service/{orderId}")
