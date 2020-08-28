@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ribbon
+    name: hystrix
 
 server:
   port: 3001
@@ -11,6 +11,20 @@ eureka:
       defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
 
 ribbon:
-  MaxAutoRetriesNextServer: 2
+  MaxAutoRetriesNextServer: 1
   MaxAutoRetries: 1
   OkToRetryOnAllOperations: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 500
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
